@@ -1,0 +1,25 @@
+{
+  "name": "hacktunnel-mockup",
+  "version": "0.1.0",
+  "description": "Hacktunnel html/css/js mockup.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "express": "~4.12.4",
+    "less-middleware": "*"
+  },
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-bower": "0.0.10",
+    "gulp-image-resize": "^0.6.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-less": "^3.0.3",
+    "gulp-newer": "^0.5.1",
+    "path": "^0.11.14"
+  }
+}

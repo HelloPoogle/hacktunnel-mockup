@@ -1,0 +1,288 @@
+@import 'loading-indicator.less';
+@import 'custom-scrollbar.less';
+@import 'bubbles.less';
+@import 'faq.less';
+
+/* CSS style */
+
+body {
+  font-family: 'Open Sans';
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@media screen and (max-device-width: 768px) {
+body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+}
+
+@media screen and (min-device-width: 1300px) {
+body {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+}
+
+.headline {
+  font-family: 'Helvetica';
+}
+
+.slogan {
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.jumbotron {
+  background-color: rgba(0,0,0,0);
+}
+
+.navbar-modernized {
+  border-radius: 0;
+  margin-bottom: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.transparent {
+  background-color: transparent;
+  border: none;
+}
+
+.full-height {
+  height: 100%;
+}
+.vertical-center {
+  height: 100%;
+  width: 100%;
+  text-align: center; /* align the inline(-block) elements horizontally */
+  font: 0/0 a; /* remove the gap between inline(-block) elements */
+}
+.vertical-center:before { /* create a full-height inline block pseudo=element */
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;    /* vertical alignment of the inline element */
+  height: 100%;
+}
+.vertical-center > .container {
+  max-width: 100%;
+  display: inline-block;
+  vertical-align: middle;  /* vertical alignment of the inline element */
+                           /* reset the font property */
+  font: 16px/1 "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+@media (max-width: 768px) {
+  .vertical-center:before {
+    height: auto;
+    /* Or */
+    display: none;
+  }
+}
+
+/* blinking cursor */
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 30px;
+  color: #2E3D48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+/* tunnel page */
+
+html, .tunnel-page {
+  height: 100%;
+}
+
+.tunnel-page
+{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: url(/img/blank.gif) no-repeat center center fixed;
+  /*background-size: 100% auto;*/
+
+  .header {
+    margin-top: 20px;
+
+    .logo {
+      font-size: 18px;
+      line-height: 35px;
+
+      a {
+        color: #000000;
+        text-decoration: none;
+      }
+    } /* /logo */
+
+    .url-container {
+      padding-right: 0;
+    }
+  } /* /header */
+  .wrap {
+    height: 100%;
+    padding-top: 70px;
+
+    .wait {
+      margin-top: 70px;
+    }
+
+    /* CSS for elastic chat is complex as hell. use FLEXBOXes, the simplest approach */
+    .talk {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      height: 100%;
+        
+      width: 100%;
+      __background-color: red;
+
+      header {
+        __background-color: gray;
+      }
+      article {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        flex-basis: 0%;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex: 1 1 auto;
+        -moz-flex: 1 1 auto;
+        flex: 1 1 auto;
+        -webkit-justify-content: flex-end;
+        -moz-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+      
+        overflow-y: auto;
+        min-height: 0px;
+      }
+      footer {
+        __background-color: gray;
+
+        form input {
+          width: 100%;
+          border-width: 0px;
+          padding: 10px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+} /* /tunnel-page */
+
+.talk-bottom-panel {
+  margin-top: 20px;
+}
+
+.m {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* index page */
+
+.index-page {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: url(/img/blank.gif) no-repeat center center fixed;
+
+  h1.logo {
+    margin: 20px auto 40px auto;
+    text-indent: -5000px;
+    width: 296px;
+    height: 54px;
+    background: url(/img/hacktunnel-logo.png);
+  }
+}
+
+.tunnel-page {
+  .logo a {
+    margin-top: 2px;
+    display: inline-block;
+    text-indent: -5000px;
+    width: 170px;
+    height: 31px;
+    background: url(/img/hacktunnel-logo-small.png);
+  }
+}
+
+.footer {
+  color: #999;
+  a {
+    color: white;
+  }
+}
